@@ -130,6 +130,9 @@ html, body {
 }
 
 @media (max-width : 368px) {
+    .navbar {
+        height: 50px;
+    }
     .judul-logo {
         font-size: 1.2rem;
     }
