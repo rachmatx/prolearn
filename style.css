@@ -32,7 +32,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 15px;
+    padding: 20px 20px;
     box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -82,7 +82,7 @@ li {
 
 a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: black;
 }
 
@@ -99,7 +99,7 @@ a:hover {
     font-weight: bold;
     display: flex;
     flex-direction: row;
-    padding-left: 20px;
+    padding-left: 15px;
 }
 
 .navbar .judul-logo .log1 {
@@ -108,7 +108,7 @@ a:hover {
 
 .navbar .judul-logo .log2 {
     display: flex;
-    padding-left: 2px;
+    padding-left: 3px;
     color: black;
 }
 
@@ -122,7 +122,6 @@ a:hover {
 @media screen and (max-width: 952px) {
     .navbar .judul-logo {
         font-size: 1.8rem;
-        padding-left: 15px;
     } 
     
     .text-content {
@@ -132,9 +131,8 @@ a:hover {
 
 @media screen and (max-width: 862px) {
     .navbar .judul-logo {
-        font-size: 1.6rem;
-        padding-left: 12px;
-    } 
+        font-size: 1.7rem;
+    }
 
     #list-menu {
         display: none;
@@ -146,6 +144,7 @@ a:hover {
 
     #icon-menu {
         display: flex;
+        padding-right: 5px;
     }
 
     .text-content {
