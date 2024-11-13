@@ -1,13 +1,19 @@
-*, 
-html, body {
-    margin: 0;
+* {
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Monserrat';
 }
 
 :root {
-    --primary-color: #005CE6 
+    --primary-color: #005CE6;
+}
 
+body {
+    color: white;
+    background-image: url('');
+    background-size: 80%;
+    background-position: center;
 }
 
 .container {
@@ -15,218 +21,163 @@ html, body {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .navbar {
+    background: white;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 20px;
-    padding: 15px;
-    width: 100%;
-    height: 60px;
-    background-color: white;
-    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.5);
+    padding: 15px 15px;
+    box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.5);
 }
 
 .search {
-    --padding: 12px;
+    padding: 10px;
     width: max-content;
     display: flex;
     align-items: center;
-    padding: var(--padding);
-    border-radius: 24px;
-    -webkit-border-radius: 24px;
-    -moz-border-radius: 24px;
-    -ms-border-radius: 24px;
-    -o-border-radius: 24px;
+    border-radius: 20px;
     background: #f6f6f6;
-    transition: box-shadow 0.25s;
-    -webkit-transition: box-shadow 0.25s;
-    -moz-transition: box-shadow 0.25s;
-    -ms-transition: box-shadow 0.25s;
-    -o-transition: box-shadow 0.25s;
+    transition: box-shadow .5s;
 }
 
 .search:focus-within {
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
 }
 
 .search-input {
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Lexend', sans-serif;
     color: #333333;
-    margin-left: var(--padding);
-    outline: none;
+    margin-left: 14px;
     border: none;
+    outline: none;
     background: transparent;
 }
 
 .search-input::placeholder {
-    color: rgba(0, 0, 0, 0.25)
+    color: rgba(0, 0, 0, 0.25);
 }
 
 .search-icon {
-    color: rgba(0, 0, 0, 0.25)
+    color: rgba(0, 0, 0, 0.25);
 }
 
-.judul-logo {
+#icon-menu {
+    display: none;
+    display: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+}
+
+a:hover {
+    padding: 5%;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 3px;
+}
+
+.navbar .judul-logo {
+    font-family: "Libre Baskerville", serif;
+    font-size: 2rem;
+    font-weight: bold;
     display: flex;
     flex-direction: row;
-    font-size: 2rem;
-    padding: 15px;
+    padding-left: 20px;
 }
 
-.log1 {
+.navbar .judul-logo .log1 {
     color: var(--primary-color);
-    font-weight: 1000;
 }
 
-.log2 {
-    color: black;
+.navbar .judul-logo .log2 {
+    display: flex;
     padding-left: 2px;
-    font-weight: 700;
+    color: black;
 }
 
 .text-content {
-
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    gap: 1rem;
 }
 
-.text-content>li {
-    list-style-type: none;
-    padding: 10px;
+
+@media screen and (max-width: 952px) {
+    .navbar .judul-logo {
+        font-size: 1.8rem;
+        padding-left: 15px;
+    } 
+    
+    .text-content {
+        font-size: .9rem;
+    }
 }
 
-.text-content >li >a {
-    color: black;
-    font-size: 1rem;
-    font-weight: 400;
-    text-decoration: none;
-}
+@media screen and (max-width: 862px) {
+    .navbar .judul-logo {
+        font-size: 1.6rem;
+        padding-left: 12px;
+    } 
 
-.text-content >li >a:hover {
-    color: var(--primary-color);
-    transition: all ease in-out;
-    -webkit-transition: all 0.6s ease in-out;
-    -moz-transition: all ease in-out;
-    -ms-transition: all ease in-out;
-    -o-transition: all ease in-out;
-}
-
-.active {
-    background-color: var(--primary-color);
-    color: white !important;
-    padding: 8px;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-}
-
-.active:hover {
-    color: white !important;
-}
-
-@media screen and (max-width : 768px) {
-    .judul-logo {
-        font-size: 1.7rem;
+    #list-menu {
+        display: none;
     }
 
-    .search {
-        width: 160px;
+    #list-menu.active {
+        display: flex;
+    }
+
+    #icon-menu {
+        display: flex;
     }
 
     .text-content {
-        display: flex;
-        flex-direction: row;
-        width: auto;
-        padding-right: 10px;
-    }
-    
-    .text-content >li {
-        display: flex;
-    }
-}
-
-@media screen and (max-width : 668px) {
-    .judul-logo {
-        font-size: 1.7rem;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #333333;
+        top: 70px;
+        left: 0;
+        text-align: center;
+        flex-direction: column;
+        transition: all .5s;
     }
 
-    .search {
-        width: 140px;
+    nav ul li {
+        display: fixed;
+        align-items: center;
+        justify-content: center;
+        padding-top: 30px;
+        gap: 2rem;
     }
 
-    .text-content {
-        display: flex;
-        flex-direction: row;
-        width: auto;
-        padding-right: 10px;
-    }
-    
-    .text-content >li {
-        display: flex;
-    }
-}
-
-@media (max-width : 480px) {
-    .judul-logo {
+    nav ul li a {
         font-size: 1.2rem;
     }
 
-    .search {
-        width: 120px;
-    }
-
-    .text-content {
-        display: flex;
-        flex-direction: row;
-        width: auto;
-        padding-left: 0;
-    }
-    
-    .text-content >li >a {
-        display: flex;
-        font-size: 0.8rem;
-    }
-
-    .active {
-        padding:8px;
-    }
-}
-
-@media (max-width : 368px) {
-    .navbar {
-        height: 50px;
+    a:hover, a.active {
+        background: none;
+        color: var(--primary-color);
+        transition: .35s;
     }
 
     .search {
         display: none;
-    }
-
-    .judul-logo {
-        font-size: 1.2rem;
-    }
-    .text-content {
-        display: flex;
-        flex-direction: row;
-        width: auto;
-        padding-left: 0;
-    }
-
-    .active {
-        padding: 8px;
-    }
-
-    .text-content >li >a {
-        display: flex;
-        font-size: 0.8rem;
-        padding: 5px;
     }
 }
