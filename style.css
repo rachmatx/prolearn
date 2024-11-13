@@ -2,18 +2,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Monserrat';
+    font-family: 'Libre Baskerville', serif;
 }
 
 :root {
     --primary-color: #005CE6;
-}
-
-body {
-    color: white;
-    background-image: url('');
-    background-size: 80%;
-    background-position: center;
+    --secondary-color: #B0B0B0;
+    --background-color: whitesmoke;
+    --text-color: black;
 }
 
 .container {
@@ -21,7 +17,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-color: whitesmoke;
+    background-color: var(--background-color);
 }
 
 .navbar {
@@ -53,7 +49,7 @@ body {
 .search-input {
     font-size: 14px;
     font-family: 'Lexend', sans-serif;
-    color: #333333;
+    color: var(--text-color);
     margin-left: 14px;
     border: none;
     outline: none;
@@ -70,12 +66,10 @@ body {
 
 #icon-menu {
     display: none;
-    display: none;
-    color: black;
+    color: var(--text-color);
     font-size: 1.5rem;
     cursor: pointer;
 }
-
 
 li {
     list-style: none;
@@ -84,7 +78,7 @@ li {
 a {
     text-decoration: none;
     font-size: 1.1rem;
-    color: black;
+    color: var(--text-color);
 }
 
 a:hover {
@@ -110,7 +104,7 @@ a:hover {
 .navbar .judul-logo .log2 {
     display: flex;
     padding-left: 3px;
-    color: black;
+    color: var(--text-color);
 }
 
 .text-content {
@@ -118,7 +112,6 @@ a:hover {
     gap: 1rem;
     padding-right: 20px;
 }
-
 
 @media screen and (max-width: 952px) {
     .navbar .judul-logo {
@@ -137,7 +130,14 @@ a:hover {
 
     #list-menu {
         display: none;
-        opacity: 0;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--secondary-color);
+        top: 70px;
+        text-align: center;
+        flex-direction: column;
     }
 
     #list-menu.active {
@@ -149,19 +149,7 @@ a:hover {
         padding-right: 5px;
     }
 
-    .text-content {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #333333;
-        top: 70px;
-        left: 0;
-        text-align: center;
-        flex-direction: column;
-    }
-
     nav ul li {
-        display: fixed;
         align-items: center;
         justify-content: center;
         padding-top: 30px;
