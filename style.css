@@ -73,6 +73,7 @@ body {
     display: none;
     color: black;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 
@@ -136,6 +137,7 @@ a:hover {
 
     #list-menu {
         display: none;
+        opacity: 0;
     }
 
     #list-menu.active {
@@ -156,7 +158,6 @@ a:hover {
         left: 0;
         text-align: center;
         flex-direction: column;
-        transition: all .75s;
     }
 
     nav ul li {
