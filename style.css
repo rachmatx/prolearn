@@ -156,7 +156,7 @@ a:hover {
         left: 0;
         text-align: center;
         flex-direction: column;
-        transition: all .5s;
+        transition: all .75s;
     }
 
     nav ul li {
